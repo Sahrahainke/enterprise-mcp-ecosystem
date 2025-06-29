@@ -1,0 +1,37 @@
+{
+  "name": "enterprise-mcp-ecosystem",
+  "version": "1.0.0", 
+  "description": "Enterprise MCP server ecosystem for marketing automation & CRM integration",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm run install-servers",
+    "install-servers": "for dir in servers/*/; do (cd \"$dir\" && npm install); done",
+    "build-all": "npm run build-servers", 
+    "build-servers": "for dir in servers/*/; do (cd \"$dir\" && npm run build); done",
+    "test-all": "npm run test-servers",
+    "test-servers": "for dir in servers/*/; do (cd \"$dir\" && npm test); done",
+    "health-check": "echo 'Health check placeholder'",
+    "start-ecosystem": "npm run build-all && echo 'MCP Ecosystem ready for Claude Desktop'",
+    "dev": "npm run build-all && echo 'Development environment ready'"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol", 
+    "enterprise",
+    "automation",
+    "marketing",
+    "crm",
+    "hubspot",
+    "teams",
+    "typescript"
+  ],
+  "author": "Sahrahainke",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sahrahainke/enterprise-mcp-ecosystem.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
